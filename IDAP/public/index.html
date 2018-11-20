@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bienvenido a IDAP</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="modal/jquery.loadingModal.min.css">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" ></script>
+    
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.5.7/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.5.7/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.5.7/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.5.7/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.5.7/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+ 
+  </head>
+  <body>
+    <div class="container" id="container">
+      Loading content...
+
+
+      <p id="load">Firebase SDK Loading&hellip;</p>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        
+        // firebase.database().ref('database').on('value', snapshot => { 
+        //   console.log("Info:::: ", snapshot.val())
+        // });
+
+        // firebase.messaging().requestPermission().then(() => { });
+// Initialize Firebase
+      // var config = {
+      //   apiKey: "AIzaSyBv4-7du6B9fTYHE7jFWvo4gIFLx5xbraw",
+      //   authDomain: "idap-9501d.firebaseapp.com",
+      //   databaseURL: "https://idap-9501d.firebaseio.com",
+      //   projectId: "idap-9501d",
+      //   storageBucket: "idap-9501d.appspot.com",
+      //   messagingSenderId: "224447548204"
+      // };
+      // firebase.initializeApp(config);
+
+
+
+      firebase.storage().ref('images/bg-image.png').getDownloadURL().then(function(url) {
+            // Insert url into an <img> tag to "download"
+            //console.log("0")
+            $('body').css({ 'background-image': "url(" + url + ")",
+                            'background-repeat': "no-repeat",
+                            'background-position':"left center",
+                            'background-attachment':"fixed",
+                            'background-size': "contain, cover" });
+        }).catch(function(error) {
+
+          switch (error.code) {
+            case 'storage/object-not-found':
+            // File doesn't exist
+            //console.log("1")
+            break;
+            case 'storage/unauthorized':
+            // User doesn't have permission to access the object
+            //console.log("2")
+            break;
+            case 'storage/canceled':
+            // User canceled the upload
+            //console.log("3")
+            break;
+            case 'storage/unknown':
+            //console.log("4")
+            // Unknown error occurred, inspect the server response
+            break;
+          }
+
+        });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="lib/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="login/css/login.css">
+    <link rel="stylesheet" href="signup/css/signup.css">
+    <script src="modal/jquery.loadingModal.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js"></script>
+  </body>
+</html>

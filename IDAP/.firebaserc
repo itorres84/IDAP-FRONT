@@ -1,0 +1,22 @@
+{
+  "projects": {
+    "default": "idap-9501d"
+  },
+  "targets": {
+    "idap-9501d": {
+      "database": {
+        "other": [
+          "idap-9501d-53452-usuarios",
+          "idap-9501d-usuarios",
+          "my-other-db-3"
+        ],
+        "main": [
+          "idap-9501d",
+          "my-db-1",
+          "my-db-2",
+          "my-db-2idap-9501d"
+        ]
+      }
+    }
+  }
+}

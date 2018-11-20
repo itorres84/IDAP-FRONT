@@ -1,0 +1,76 @@
+<div class="wrapper">
+    <img src="" id="logoimg" alt="Logo" style="width:200px;padding-top: 0px;">
+    <form name="signup_form" id="signup_form" class="form-signup" data-toggle="validator" role="form">       
+        <h3>Por favor registrate</h3>
+        <hr class="colorgraph">
+        <div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="form-group">
+                    <input type="text" name="first_name" id="first_name" 
+                    class="form-control input-lg" placeholder="Nombre" tabindex="1" required>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="form-group">
+                    <input type="text" name="last_name" id="last_name" 
+                    class="form-control input-lg" placeholder="Apellidos" tabindex="2" required>
+				</div>
+			</div>
+        </div>
+        <div class="form-group">
+			<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Correo electrónico" tabindex="3" required>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="form-group">
+					<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Contraseña" tabindex="4" required>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="form-group">
+					<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirma Contraseña" tabindex="5" required>
+			    </div>
+		    </div>
+        </div>
+        <div class="form-check">
+			<table>
+				<tr>
+					<td>
+						<input type="checkbox" id="termConditions" tabindex="6" required>
+					</td>
+					<td>
+						<label class="form-check-label" for="exampleCheck1"><a href="#" data-toggle="modal" data-target="#t_and_c_m">Acepto Terminos y Condiciones</a></label>
+					</td>
+				</tr>
+			</table>
+        </div>
+		<hr class="colorgraph">
+		<div class="row">
+			<div class="col-xs-12 col-md-6"><input type="submit" value="Registrate" class="btn btn-primary btn-block btn-lg" tabindex="7" id="signup" name="signup"></div>
+			<div class="col-xs-12 col-md-6"><button type="button" class="btn btn-success btn-block btn-lg" id="login" name="login">Ya tengo cuenta</button></div>
+		</div>
+	</form>	
+<!-- Modal -->
+<div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
+				</div>
+				<div class="modal-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">I Agree</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->		
+</div>
