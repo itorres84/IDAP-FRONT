@@ -12,3 +12,110 @@
 
   /* the rest of your styling */
 }
+
+.pwelcome {
+  width: 300px;
+  height: 29px;
+  margin: auto;
+  font-family: "Helvetica Neue";
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #f5a623;
+}
+
+.p-subtitle {
+  width: 200px;
+  height: 19px;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #302e84;
+}
+
+.p-subtitle-table {
+  height: 19px;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #302e84;
+  text-align: right;
+}
+
+
+.tablewhite{
+  background-color: white;
+}
+
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+/* carusel style */
+
+.basecard {
+  max-width:300px;
+  height: 215px;
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/idap-9501d.appspot.com/o/images%2FCardBlack2.png?alt=media&token=40d1570b-833e-4ab7-b578-78aa69e567be');
+  background-size: cover;
+  background-clip: border-box;
+  background-repeat: no-repeat; 
+  margin: auto;
+  position: relative;
+}
+
+
+.logo-visa{
+
+  position: absolute;
+  width: 50px;
+  height: 50px; 
+  right: 30px;
+  bottom: 30px;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/idap-9501d.appspot.com/o/images%2Fvisa-logo.png?alt=media&token=3c31d67a-b98d-4a9c-b0bd-54d2562d7f4d");
+
+}
+
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: #302e84;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color:  #302e84;
+}

@@ -1,0 +1,143 @@
+<br>
+<p class="pwelcome">Realizar pago</p>
+<form class="form" role="form" autocomplete="off" id="formPayment" name="formPayment" action="" method="post">
+    <div style="max-width: 500px;margin: auto;">
+        <div class="form-group">
+            <label for="formGroupExampleInput">Concepto</label>
+            <input type="text" class="form-control" id="concepto" placeholder="Escribe un conceto para que identifiques el pago" required>
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Monto</label>
+            <input type="number" class="form-control" id="amount" name="amount" placeholder="$0.00" required>
+        </div>
+    </div>
+    <div style="max-width: 600px;margin: auto;">
+        <p class="p-subtitle">Método de pago</p>
+        <h6>Puedes realizar tu pago con tarjetas de crédito o débito  nacionales de cualquier banco, para usar tarjetas internacionales puedes usar PayPal.</h6>
+        <p class="p-subtitle">Tus tarjetas</p>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner" id="carruselContent">
+                <div class="carousel-item active">
+                    <div class="basecard">
+                        <div style="position: absolute;
+                         left: 50px;
+                         bottom: 80px;">No cuentas con tarjetas registradas</div>
+                         <img src="https://firebasestorage.googleapis.com/v0/b/idap-9501d.appspot.com/o/images%2Fvisa-logo.png?alt=media&token=3c31d67a-b98d-4a9c-b0bd-54d2562d7f4d"
+                         style="position: absolute;
+                         right: 50px;
+                         bottom: 20px;
+                         width: 50px;
+                         height: 50px;">
+                         <img src="https://firebasestorage.googleapis.com/v0/b/idap-9501d.appspot.com/o/images%2FpxMastercard-logo.png?alt=media&token=7ed91182-0bd7-4fcd-973f-12dbf3d3407c"
+                         style="position: absolute;
+                         left: 50px;
+                         bottom: 20px;
+                         width: 70px;
+                         height: 50px;">
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</form>
+<div style="max-width: 600px;margin: auto;">
+    <hr class="colorgraph"><br>
+    <table style="width: 100%;" border="0">
+        <tr>
+            <td><button type="button" class="btn btn-outline-success btn-lg btn-block" id="newCard" data-toggle="modal" data-target="#modalCard">Usar otra tarjeta</button></td>
+            <td><button type="button" class="btn btn-outline-secondary btn-lg btn-block">Pagar con PayPal</button></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <br>
+                <div style="text-align: center">
+                    <a href="#" id="back">Regresar</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalCard" tabindex="-1" role="dialog" aria-labelledby="modalCardlabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalCardlabel">Registra los datos de tu tarjeta</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                 <!-- form card cc payment -->
+                 <div class="card card-outline-secondary">
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off" id="formCard" name="formCard" action="" method="post">
+                                <div class="form-group">
+                                    <label for="cc_name">Nombre del titular de la tarjeta</label>
+                                    <input type="text" class="form-control" id="cc_name" pattern="\w+ \w+.*" title="Nombre completo del titular" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label>Numbero de la tarjeta</label>
+                                    <input type="text" class="form-control" id="cc_numcard" autocomplete="off" maxlength="16" pattern="\d{16}" title="Numero de la tarjeta" required="">
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-12">Fecha de vencimiento de la tarjeta</label>
+                                    <div class="col-md-4">
+                                        <select class="form-control" name="cc_exp_mo" size="0" id="cc_exp_mo">
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <select class="form-control" name="cc_exp_yr" size="0" id="cc_exp_yr">
+                                            <option>2018</option>
+                                            <option>2019</option>
+                                            <option>2020</option>
+                                            <option>2021</option>
+                                            <option>2022</option>
+                                            <option>2023</option>
+                                            <option>2024</option>
+                                            <option>2025</option>
+                                            <option>2026</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" autocomplete="off" maxlength="3" pattern="\d{3}" title="Tres digitos de atras de tu tarjeta" required="" placeholder="CVC" id="cvv">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-group row">
+                                    <div class="col-md-6">
+                                        <button type="reset" class="btn btn-default btn-lg btn-block" data-dismiss="modal">Cancelar</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button type="submit" class="btn btn-success btn-lg btn-block">Guardar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /form card cc payment -->
+            </div>
+        </div>
+    </div>
+</div>
+

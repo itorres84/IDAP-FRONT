@@ -38,7 +38,13 @@ $(document).ready(function(){
                 var user = firebase.auth().currentUser;
                 user.sendEmailVerification().then(function(){
                     var name = $("#first_name").val() + $("#last_name").val();
-                    writeUserData(user.uid, name, $("#email").val())
+                    user.updateProfile({
+                        displayName: name
+                      }).then(function() {
+                          writeUserData(user.uid, name, $("#email").val())
+                      }, function(error) {
+                          writeUserData(user.uid, name, $("#email").val()) 
+                    });
                 });
             }, function(error) {
                 // Handle Errors here.
@@ -58,8 +64,7 @@ $(document).ready(function(){
         var database = firebase.database();
         database.ref('users/'+userId).set({
           username: name,
-          email: email,
-          isActive : false
+          email: email
         }, function(error) {
             if (error) {
               $.hideLoading()
